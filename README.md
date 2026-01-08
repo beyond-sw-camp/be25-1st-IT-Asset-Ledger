@@ -23,7 +23,7 @@
 | (신민수) | (https://github.com/ZonezIpex) |
 | (김승욱) | (https://github.com/KIM-SUNG-UK) |
 | (김지연) | (https://github.com/wldusdus63) |
-| (모희주) | (링크) |
+| (모희주) | (https://github.com/heejudy) |
 | (박지인) | (https://github.com/mondayziin) |
 | (윤준상) | (https://github.com/wnstkd704) |
 
