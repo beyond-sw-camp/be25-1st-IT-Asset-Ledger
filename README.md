@@ -20,7 +20,7 @@
   <tr>
     <td align="center" valign="top">
       <img src="https://github.com/beyond-sw-camp/be25-1st-IT-Asset-Ledger/blob/main/%EA%B3%A0%EC%96%91%EC%9D%B4/cat1.jpg?raw=true" width="120" alt="신민수" /><br />
-      <b>신민수</b><br />
+      <b>팀장:신민수</b><br />
       <a href="https://github.com/ZonezIpex">
         <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
       </a>
