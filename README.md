@@ -18,14 +18,14 @@
 
 ### 👥팀원
 
-| 이름 | GitHub |
-|---|---|
-| (신민수) | (https://github.com/ZonezIpex) |
-| (김승욱) | (https://github.com/KIM-SUNG-UK) |
-| (김지연) | (https://github.com/wldusdus63) |
-| (모희주) | (https://github.com/heejudy) |
-| (박지인) | (https://github.com/mondayziin) |
-| (윤준상) | (https://github.com/wnstkd704) |
+| 프로필 | 이름 | GitHub |
+|---:|---|---|
+| <img src="./고양이/cat1.jpg" width="80" alt="신민수" /> | 신민수 | https://github.com/ZonezIpex |
+| <img src="./고양이/cat2.jpg" width="80" alt="김승욱" /> | 김승욱 | https://github.com/KIM-SUNG-UK |
+| <img src="./고양이/cat3.jpg" width="80" alt="김지연" /> | 김지연 | https://github.com/wldusdus63 |
+| <img src="./고양이/cat4.jpg" width="80" alt="모희주" /> | 모희주 | https://github.com/heejudy |
+| <img src="./고양이/cat5.jpg" width="80" alt="박지인" /> | 박지인 | https://github.com/mondayziin |
+| <img src="./고양이/cat6.jpg" width="80" alt="윤준상" /> | 윤준상 | https://github.com/wnstkd704 |
 
 ---
 
@@ -187,7 +187,9 @@ WHERE r.receiving_id IS NULL
 ```
 </details>
 
+
 ---
 
-### 회고록
-- (작성 예정)
+## 수정본 ZIP (README 반영)
+
+[Download the updated zip](sandbox:/mnt/data/be25-1st-IT-Asset-Ledger-main_updated.zip)
