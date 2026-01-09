@@ -20,7 +20,7 @@
 <table>
   <tr>
     <td align="center" valign="top">
-      <img src="./동물%20이미지/cat.png" width="120" alt="신민수" /><br />
+      <img src="./동물%20이미지/siba.png" width="120" alt="신민수" /><br />
       <b>팀장:신민수</b><br />
       <a href="https://github.com/ZonezIpex">
         <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
@@ -28,7 +28,7 @@
     </td>
 
   <td align="center" valign="top">
-      <img src="./동물%20이미지/mouse.png" width="120" alt="김승욱" /><br />
+      <img src="./동물%20이미지/raven.png" width="120" alt="김승욱" /><br />
       <b>김승욱</b><br />
       <a href="https://github.com/KIM-SUNG-UK">
         <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
@@ -36,7 +36,7 @@
     </td>
 
   <td align="center" valign="top">
-      <img src="./동물%20이미지/rabbit.png" width="120" alt="김지연" /><br />
+      <img src="./동물%20이미지/mouse.png" width="120" alt="김지연" /><br />
       <b>김지연</b><br />
       <a href="https://github.com/wldusdus63">
         <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
@@ -44,7 +44,7 @@
     </td>
 
   <td align="center" valign="top">
-      <img src="./동물%20이미지/raven.png" width="120" alt="모희주" /><br />
+      <img src="./동물%20이미지/rabbit.png" width="120" alt="모희주" /><br />
       <b>모희주</b><br />
       <a href="https://github.com/heejudy">
         <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
@@ -52,7 +52,7 @@
     </td>
 
   <td align="center" valign="top">
-      <img src="./동물%20이미지/siba.png" width="120" alt="박지인" /><br />
+      <img src="./동물%20이미지/cat.png" width="120" alt="박지인" /><br />
       <b>박지인</b><br />
       <a href="https://github.com/mondayziin">
         <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
