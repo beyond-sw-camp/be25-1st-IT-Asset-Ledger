@@ -16,14 +16,13 @@
 
 ### 👥팀원
 
-<!-- GitHub 버튼 이미지 파일을 여기에 두면 됨: ./assets/github-btn.png -->
 <table>
   <tr>
     <td align="center" valign="top">
       <img src="./고양이/cat1.jpg" width="120" alt="신민수" /><br />
       <b>신민수</b><br />
       <a href="https://github.com/ZonezIpex">
-        <img src="./assets/github-btn.png" width="80" alt="GitHub" />
+        <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
       </a>
     </td>
 
@@ -31,7 +30,7 @@
       <img src="./고양이/cat2.jpg" width="120" alt="김승욱" /><br />
       <b>김승욱</b><br />
       <a href="https://github.com/KIM-SUNG-UK">
-        <img src="./assets/github-btn.png" width="80" alt="GitHub" />
+        <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
       </a>
     </td>
 
@@ -39,7 +38,7 @@
       <img src="./고양이/cat3.jpg" width="120" alt="김지연" /><br />
       <b>김지연</b><br />
       <a href="https://github.com/wldusdus63">
-        <img src="./assets/github-btn.png" width="80" alt="GitHub" />
+        <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
       </a>
     </td>
 
@@ -47,7 +46,7 @@
       <img src="./고양이/cat4.jpg" width="120" alt="모희주" /><br />
       <b>모희주</b><br />
       <a href="https://github.com/heejudy">
-        <img src="./assets/github-btn.png" width="80" alt="GitHub" />
+        <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
       </a>
     </td>
 
@@ -55,7 +54,7 @@
       <img src="./고양이/cat5.jpg" width="120" alt="박지인" /><br />
       <b>박지인</b><br />
       <a href="https://github.com/mondayziin">
-        <img src="./assets/github-btn.png" width="80" alt="GitHub" />
+        <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
       </a>
     </td>
 
@@ -63,7 +62,7 @@
       <img src="./고양이/cat6.jpg" width="120" alt="윤준상" /><br />
       <b>윤준상</b><br />
       <a href="https://github.com/wnstkd704">
-        <img src="./assets/github-btn.png" width="80" alt="GitHub" />
+        <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
       </a>
     </td>
   </tr>
