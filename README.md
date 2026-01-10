@@ -2,7 +2,9 @@
 ## 사내 IT자산 배정·대여/정산 DB 설계
 
 <p align="center">
-  <img src="./이미지/IT자산원정.png" width="220" alt="IT자산원정 대표 이미지" />
+  <img src="./이미지/IT자산원정.png" width="360" alt="대표 아이콘: IT자산원정" />
+  <br />
+  <sub><b>대표 아이콘</b></sub>
 </p>
 
 ## 👀목차
