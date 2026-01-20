@@ -190,6 +190,8 @@
   <sub><kbd>🛠 Tool</kbd> <kbd>Draw.io</kbd> <kbd>📌 Output</kbd> <kbd>Scenario</kbd></sub>
 </div>
 
+🔗 [요구사항 명세서]([https://docs.google.com/spreadsheets/d/1Ud5T2h4dr9DT8dqLcxDZLFeatAoFF_CawhjO1A6-qOo/edit?gid=0#gid=0](https://drive.google.com/file/d/1k9W1oRKgEGQD95bliI3AYVrtp-0PbUSs/view?usp=sharing))
+
 ---
 
 <a id="요구사항-명세서"></a>
@@ -221,6 +223,8 @@
 <div align="center">
   <sub><kbd>🛠 Tool</kbd> <kbd>Draw.io</kbd> <kbd>📌 Output</kbd> <kbd>Use Case</kbd></sub>
 </div>
+
+🔗 [유스케이스 다이어그램]([https://docs.google.com/spreadsheets/d/1Ud5T2h4dr9DT8dqLcxDZLFeatAoFF_CawhjO1A6-qOo/edit?gid=0#gid=0](https://drive.google.com/file/d/1nNf_P46JZsie_RNl2GgsCoZslGiGDDay/view?usp=sharing))
 
 ---
 
