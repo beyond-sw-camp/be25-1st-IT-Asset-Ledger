@@ -255,7 +255,7 @@
   <sub><kbd>🛠 Tool</kbd> <kbd>ERDCloud</kbd> <kbd>📌 Output</kbd> <kbd>ERD</kbd></sub>
 </div
 
-🔗 [ERD](ㅇㅇㅇㅇㅇㅇ)
+🔗 [ERD<- 아직 링크연결 안되있음](ㅇㅇㅇㅇㅇㅇ)
 
 ---
 
@@ -270,7 +270,7 @@
     <sub><kbd>🛠 Tool</kbd> <kbd>EXEL, spreadsheet</kbd> <kbd>📌 Output</kbd> <kbd>테이블명세서</kbd></sub>
   </div>
   
-🔗 [테이블 명세서](https://docs.google.com/spreadsheets/d/1Kq-G8fCzPooRyTlAKVj3nLO7C5vEEy4sBO_PF6zfc2E/edit?usp=sharing)
+🔗 [테이블 명세서<- 편집권한 닫아야함 *** ](https://docs.google.com/spreadsheets/d/1Kq-G8fCzPooRyTlAKVj3nLO7C5vEEy4sBO_PF6zfc2E/edit?usp=sharing)
 
 ---
 
