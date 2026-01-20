@@ -113,7 +113,7 @@
 - 반납예정일(due_date) 경과 시 미반납 대상 및 반납관리(요구/경고/제재) 발생 이력
 
 본 프로젝트는 **자산 등록 → 할당/출고 → 반납요청 → 회수 → 검수(수리 여부 판정) → 가용 복귀/수리 처리** 흐름을 DB 모델로 고정하고,  
-**due_date 경과를 트리거로 반납관리 이벤트를 생성**해 요구/경고/제재를 시스템 로그로 남겨 누락과 지연을 줄입니다(외부 메신저/메일 실연동 제외).
+**due_date 경과를 트리거로 반납관리 이벤트를 생성**해 요구/경고/제재를 시스템 로그로 남겨 누락과 지연을 줄입니다.(외부 메신저/메일 실연동 제외)
 
 > **목표(구조적 오류 예방)**
 - 상태 역전 방지: 검수 없이 AVAILABLE 복귀 금지, 수리 이력 없이 UNDER_REPAIR 전환 금지
@@ -151,28 +151,32 @@
 ---
 
 <a id="wbs"></a>
-## 📅WBS
+## 📅WBS 
+🔗 [WBS](https://docs.google.com/spreadsheets/d/1kv5N2GoCfgB2f_pzPkxqvyVfNcI-7SqO/edit?usp=sharing&ouid=102208872170708224187&rtpof=true&sd=true)
 
 <div align="center">
 
 ![](./이미지/프로젝트_구성/WBS.png)
 
 </div>
-
 <div align="center">
   <sub><kbd>🛠 Tool</kbd> <kbd>MS Excel</kbd> <kbd>📌 Output</kbd> <kbd>WBS</kbd></sub>
 </div>
 
-🔗 [WBS](https://docs.google.com/spreadsheets/d/1kv5N2GoCfgB2f_pzPkxqvyVfNcI-7SqO/edit?usp=sharing&ouid=102208872170708224187&rtpof=true&sd=true)
+
 
 ---
 
 <a id="프로젝트-기획서"></a>
 ## 📄프로젝트 기획서
 
-- **프로젝트 기획서**: [기획서.pdf](./파일/PDF파일/기획서.pdf)
-<img src="./이미지/프로젝트_구성/기획서이미지.png" width="460" alt="기획서" />
+🔗 [기획서](./파일/PDF파일/기획서.pdf)
 
+<div align="center">
+<img src="./이미지/프로젝트_구성/기획서이미지.png" width="460" alt="기획서" />
+</div>
+
+<br>
 <div align="center">
   <sub><kbd>🛠 Tool</kbd> <kbd>PDF</kbd> <kbd>📌 Output</kbd> <kbd>Planning Doc</kbd></sub>
 </div>
@@ -181,6 +185,8 @@
 
 <a id="프로젝트-시나리오"></a>
 ## 🎬프로젝트 시나리오
+
+🔗 [시나리오 다이어그램](https://drive.google.com/file/d/1k9W1oRKgEGQD95bliI3AYVrtp-0PbUSs/view?usp=sharing)
 
 <div align="center">
 
@@ -192,12 +198,14 @@
   <sub><kbd>🛠 Tool</kbd> <kbd>Draw.io</kbd> <kbd>📌 Output</kbd> <kbd>Scenario</kbd></sub>
 </div>
 
-🔗 [시나리오 다이어그램](https://drive.google.com/file/d/1k9W1oRKgEGQD95bliI3AYVrtp-0PbUSs/view?usp=sharing)
+
 
 ---
 
 <a id="요구사항-명세서"></a>
 ## 📘요구사항 명세서
+
+🔗 [요구사항 명세서](https://docs.google.com/spreadsheets/d/1qAGAu5frAmMS7LulqDKW_5eYSSz0MkBg/edit?usp=sharing&ouid=102208872170708224187&rtpof=true&sd=true)
 
 <div align="center">
 
@@ -209,12 +217,12 @@
   <sub><kbd>🛠 Tool</kbd> <kbd>MS Excel</kbd> <kbd>📌 Output</kbd> <kbd>Requirements</kbd></sub>
 </div>
 
-🔗 [요구사항 명세서](https://docs.google.com/spreadsheets/d/1qAGAu5frAmMS7LulqDKW_5eYSSz0MkBg/edit?usp=sharing&ouid=102208872170708224187&rtpof=true&sd=true)
-
 ---
 
 <a id="유스케이스-다이어그램"></a>
 ## 🧩유스케이스 다이어그램
+
+🔗 [유스케이스 다이어그램](https://drive.google.com/file/d/1nNf_P46JZsie_RNl2GgsCoZslGiGDDay/view?usp=sharing)
 
 <div align="center">
 
@@ -226,16 +234,18 @@
   <sub><kbd>🛠 Tool</kbd> <kbd>Draw.io</kbd> <kbd>📌 Output</kbd> <kbd>Use Case</kbd></sub>
 </div>
 
-🔗 [유스케이스 다이어그램](https://drive.google.com/file/d/1nNf_P46JZsie_RNl2GgsCoZslGiGDDay/view?usp=sharing)
-
 ---
 
 <a id="데이터-설계"></a>
 ## 🧱데이터 설계
 
-- **데이터 설계**: [데이터설계.pdf](./파일/PDF파일/데이터설계.pdf)
-<img src="./이미지/프로젝트_구성/데이터설계.png" width="460" alt="데이터설계" />
+🔗 [데이터설계](./파일/PDF파일/데이터설계.pdf)
 
+<div align="center">
+<img src="./이미지/프로젝트_구성/데이터설계.png" width="460" alt="데이터설계" />
+</div>
+
+<br>
 <div align="center">
   <sub><kbd>🛠 Tool</kbd> <kbd>PDF</kbd> <kbd>📌 Output</kbd> <kbd>Planning Doc</kbd></sub>
 </div>
@@ -245,6 +255,8 @@
 <a id="erd"></a>
 ## 📊ERD
 
+🔗 [ERD](https://www.erdcloud.com/d/oqzg5Q52Naw23Rkyc)
+
 <div align="center">
 
 ![](./이미지/프로젝트_구성/ERD.png?v=1)
@@ -253,24 +265,26 @@
 
 <div align="center">
   <sub><kbd>🛠 Tool</kbd> <kbd>ERDCloud</kbd> <kbd>📌 Output</kbd> <kbd>ERD</kbd></sub>
-</div
-
-🔗 [ERD](https://www.erdcloud.com/d/oqzg5Q52Naw23Rkyc)
+</div>
 
 ---
 
 <a id="테이블-명세서"></a>
 ## 🗃️테이블 명세서
+
+🔗 [테이블 명세서](https://docs.google.com/spreadsheets/d/1Kq-G8fCzPooRyTlAKVj3nLO7C5vEEy4sBO_PF6zfc2E/edit?usp=sharing)
+
 <div align="center">
-  
+
 ![](./이미지/프로젝트_구성/테이블명세서.png)
 
 </div>
-  <div align="center">
-    <sub><kbd>🛠 Tool</kbd> <kbd>EXEL, spreadsheet</kbd> <kbd>📌 Output</kbd> <kbd>테이블명세서</kbd></sub>
-  </div>
+
+<div align="center">
+  <sub><kbd>🛠 Tool</kbd> <kbd>EXEL, spreadsheet</kbd> <kbd>📌 Output</kbd> <kbd>테이블명세서</kbd></sub>
+</div>
   
-🔗 [테이블 명세서<- 편집권한 닫아야함 *** ](https://docs.google.com/spreadsheets/d/1Kq-G8fCzPooRyTlAKVj3nLO7C5vEEy4sBO_PF6zfc2E/edit?usp=sharing)
+
 
 ---
 
