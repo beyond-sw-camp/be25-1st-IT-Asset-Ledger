@@ -209,7 +209,7 @@
   <sub><kbd>🛠 Tool</kbd> <kbd>MS Excel</kbd> <kbd>📌 Output</kbd> <kbd>Requirements</kbd></sub>
 </div>
 
-🔗 [요구사항 명세서](https://docs.google.com/spreadsheets/d/1Ud5T2h4dr9DT8dqLcxDZLFeatAoFF_CawhjO1A6-qOo/edit?gid=0#gid=0)
+🔗 [요구사항 명세서](https://docs.google.com/spreadsheets/d/1qAGAu5frAmMS7LulqDKW_5eYSSz0MkBg/edit?usp=sharing&ouid=102208872170708224187&rtpof=true&sd=true)
 
 ---
 
@@ -253,7 +253,9 @@
 
 <div align="center">
   <sub><kbd>🛠 Tool</kbd> <kbd>ERDCloud</kbd> <kbd>📌 Output</kbd> <kbd>ERD</kbd></sub>
-</div>
+</div
+
+🔗 [ERD](ㅇㅇㅇㅇㅇㅇ)
 
 ---
 
