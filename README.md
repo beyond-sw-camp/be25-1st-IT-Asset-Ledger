@@ -163,6 +163,8 @@
   <sub><kbd>🛠 Tool</kbd> <kbd>MS Excel</kbd> <kbd>📌 Output</kbd> <kbd>WBS</kbd></sub>
 </div>
 
+🔗 [WBS](ㅇㅇㅇㅇㅇ)
+
 ---
 
 <a id="프로젝트-기획서"></a>
@@ -182,7 +184,7 @@
 
 <div align="center">
 
-![](./이미지/프로젝트%20시나리오.png?v=1)
+![](./이미지/프로젝트%20시나리오.png?v=2)
 
 </div>
 
@@ -190,7 +192,7 @@
   <sub><kbd>🛠 Tool</kbd> <kbd>Draw.io</kbd> <kbd>📌 Output</kbd> <kbd>Scenario</kbd></sub>
 </div>
 
-🔗 [시나리오 다이어그램]([https://docs.google.com/spreadsheets/d/1Ud5T2h4dr9DT8dqLcxDZLFeatAoFF_CawhjO1A6-qOo/edit?gid=0#gid=0](https://drive.google.com/file/d/1k9W1oRKgEGQD95bliI3AYVrtp-0PbUSs/view?usp=sharing))
+🔗 [시나리오 다이어그램](https://drive.google.com/file/d/1k9W1oRKgEGQD95bliI3AYVrtp-0PbUSs/view?usp=sharing)
 
 ---
 
@@ -224,7 +226,7 @@
   <sub><kbd>🛠 Tool</kbd> <kbd>Draw.io</kbd> <kbd>📌 Output</kbd> <kbd>Use Case</kbd></sub>
 </div>
 
-🔗 [유스케이스 다이어그램]([https://docs.google.com/spreadsheets/d/1Ud5T2h4dr9DT8dqLcxDZLFeatAoFF_CawhjO1A6-qOo/edit?gid=0#gid=0](https://drive.google.com/file/d/1nNf_P46JZsie_RNl2GgsCoZslGiGDDay/view?usp=sharing))
+🔗 [유스케이스 다이어그램](https://drive.google.com/file/d/1nNf_P46JZsie_RNl2GgsCoZslGiGDDay/view?usp=sharing)
 
 ---
 
