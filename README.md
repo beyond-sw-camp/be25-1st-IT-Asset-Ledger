@@ -163,7 +163,7 @@
   <sub><kbd>🛠 Tool</kbd> <kbd>MS Excel</kbd> <kbd>📌 Output</kbd> <kbd>WBS</kbd></sub>
 </div>
 
-🔗 [WBS](ㅇㅇㅇㅇㅇ)
+🔗 [WBS](https://docs.google.com/spreadsheets/d/1kv5N2GoCfgB2f_pzPkxqvyVfNcI-7SqO/edit?usp=sharing&ouid=102208872170708224187&rtpof=true&sd=true)
 
 ---
 
