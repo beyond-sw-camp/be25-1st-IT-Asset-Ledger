@@ -705,90 +705,47 @@ CREATE OR REPLACE TABLE `policy_event_logs` (
 
 <table>
   <colgroup>
-    <col style="width: 16%" />
-    <col style="width: 26%" />
-    <col style="width: 58%" />
+    <col style="width: 18%" />
+    <col style="width: 28%" />
+    <col style="width: 54%" />
   </colgroup>
   <thead>
     <tr>
       <th align="left">이름</th>
       <th align="left">담당</th>
-      <th align="left">회고</th>
+      <th align="left">회고 (발표용 1줄)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><b>팀장 · 신민수</b></td>
-      <td>프로젝트 총괄<br/>종합 피드백</td>
-      <td>
-        <b>기준(용어/정의/정책) 선고정이 전체 수정비용을 줄였다.</b><br/>
-        <details>
-          <summary>자세히</summary>
-          일정·역할·산출물 흐름을 통합 관리하면서, 초기에 기준을 고정하지 않으면 ERD·DDL·테스트 전 구간에서 수정 비용이 급증한다는 점을 체감했다.
-        </details>
-      </td>
+      <td>프로젝트 총괄 / 종합 피드백</td>
+      <td>초기 기준(용어·정의·정책) 고정이 ERD·DDL·테스트 전 구간의 수정 비용을 가장 크게 줄였다.</td>
     </tr>
-
-<tr>
+    <tr>
       <td><b>김지연</b></td>
-      <td>프로젝트 배경<br/>문서 제작·통일화</td>
-      <td>
-        <b>정의가 애매하면 설계/로직 품질이 같이 흔들렸다.</b><br/>
-        <details>
-          <summary>자세히</summary>
-          배경·문서 정리와 용어 통일을 진행하며, 대여/반납/검수/상태값 정의가 애매한 채로 남아 있으면 트리거·프로시저 설계까지 흔들려 품질 저하로 직결된다는 걸 확인했다.
-        </details>
-      </td>
+      <td>프로젝트 배경 / 문서 제작·통일화</td>
+      <td>대여·반납·검수·상태값 정의를 문서에서 선명히 고정해야 이후 설계·로직 품질이 흔들리지 않는다.</td>
     </tr>
-
-<tr>
+    <tr>
       <td><b>모희주</b></td>
-      <td>WBS 작성<br/>발표 PPT 준비</td>
-      <td>
-        <b>“절차→테스트→오류→원인→해결” 구조가 전달력을 올렸다.</b><br/>
-        <details>
-          <summary>자세히</summary>
-          WBS와 발표자료를 구성하면서, 결과 화면 나열보다 진행 흐름을 고정해 설명해야 평가 기준 충족과 이해도가 안정적이라는 걸 배웠다.
-        </details>
-      </td>
+      <td>WBS 작성 / 발표 PPT 준비</td>
+      <td>결과 화면 나열보다 “절차→테스트→오류→원인→해결” 구조로 정리하는 게 전달력과 평가 기준 충족에 유리했다.</td>
     </tr>
-
-<tr>
+    <tr>
       <td><b>박지인</b></td>
-      <td>요구사항 명세서 작성<br/>GitHub 관리</td>
-      <td>
-        <b>버전/이력 관리가 검증 가능성을 결정했다.</b><br/>
-        <details>
-          <summary>자세히</summary>
-          요구사항 명세서 작성과 GitHub 관리를 병행하며, 문서·코드·산출물 버전이 어긋나면 재현과 검증이 어려워져 재현 조건과 변경 이력 중심으로 기록을 남기는 습관이 필수라고 정리했다.
-        </details>
-      </td>
+      <td>요구사항 명세서 작성 / GitHub 관리</td>
+      <td>문서·코드·산출물 버전이 어긋나면 검증이 불가하므로 재현 조건과 변경 이력을 기준으로 관리해야 한다.</td>
     </tr>
-
-<tr>
+    <tr>
       <td><b>김승욱</b></td>
-      <td>테이블 명세서 제작<br/>테이블 오류 검증</td>
-      <td>
-        <b>명세↔DDL 불일치가 대부분의 오류 원인이었다.</b><br/>
-        <details>
-          <summary>자세히</summary>
-          테이블 명세서 기반으로 컬럼·제약조건을 검증하면서, 컬럼명/NULL/DEFAULT/제약조건 불일치가 오류의 주원인이었고 명세와 DDL을 1:1로 맞추는 검증 루틴이 필요하다고 느꼈다.
-        </details>
-      </td>
+      <td>테이블 명세서 제작 / 테이블 오류 검증</td>
+      <td>컬럼명·NULL·DEFAULT·제약조건의 명세↔DDL 불일치가 오류 대부분을 만들었고 1:1 매칭 검증이 필요했다.</td>
     </tr>
-
-<tr>
+    <tr>
       <td><b>윤준상</b></td>
-      <td>ERD 작성<br/>오류 테스트·수정</td>
-      <td>
-        <b>관계/삭제정책 합의가 무결성 오류를 줄였다.</b><br/>
-        <details>
-          <summary>자세히</summary>
-          ERD 작성과 수정 테스트를 진행하며, 카디널리티/PK·FK/삭제 정책을 초기에 합의하지 않으면 데이터 무결성 오류가 반복되므로 설계 단계에서 정책을 확정하는 게 핵심이라고 정리했다.
-        </details>
-      </td>
+      <td>ERD 작성 / 오류 테스트·수정</td>
+      <td>카디널리티·PK/FK·삭제 정책을 초기에 합의해야 데이터 무결성 오류가 반복되지 않는다.</td>
     </tr>
   </tbody>
 </table>
-
-
