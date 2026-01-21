@@ -292,7 +292,7 @@
 ## 💾SQL 산출물
 
 <details>
-<summary><b>산출물 펼치기 / 접기</b></summary>
+<summary><b>산출물 이미지로 보기</b></summary>
 
 <br />
 
