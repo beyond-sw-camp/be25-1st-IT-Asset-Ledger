@@ -334,8 +334,9 @@
 
 </div>
 
-
 <br>
+
+## 
 
 <div>
 	
@@ -365,6 +366,8 @@
 
 <br>
 
+## 
+
 <div>
 	
 ### 조직·사용자 (권한/대상 관리)
@@ -384,6 +387,8 @@
 </div>
 
 <br />
+
+## 
 
 <!-- ================= D ================= -->
 <div>
@@ -410,106 +415,11 @@
 
 <summary><b>DDL</b></summary>
 
-<br />
+<br>
 
-#### 자산 분류 테이블 
-```SQL
-CREATE OR REPLACE TABLE `asset_categories`(
-	`category_id` VARCHAR(30) PRIMARY KEY,
-	`category_name` VARCHAR(10) NOT NULL
-);
-```
-
-#### 부서 테이블 
-```SQL
-CREATE OR REPLACE TABLE `departments`(
-	`department_id` VARCHAR(20) PRIMARY KEY,
-	`department_name` VARCHAR(20)
-);
-```
-
-#### 직원 테이블 
-```SQL
-CREATE OR REPLACE TABLE `employees`(
-	`employee_id` VARCHAR(20) PRIMARY KEY, 
-	`department_id` VARCHAR(10) NOT NULL,
-	`name` VARCHAR(10) NOT NULL,
-	`email` VARCHAR(20) NOT NULL UNIQUE,
-	`created_at` DATE,
-	`password` VARCHAR(30) NOT NULL,
-	FOREIGN KEY (`department_id`) REFERENCES `departments`(`department_id`)
-);
-```
-
-#### 자산 테이블 
-```SQL
-CREATE OR REPLACE TABLE `assets` (
-	`asset_id` VARCHAR(20) PRIMARY KEY,
-	`category_id` VARCHAR(30) NOT NULL UNIQUE,
-	`serial_no` INT NOT NULL,
-	`model_name` VARCHAR(50),
-	FOREIGN KEY (`category_id`) REFERENCES `asset_categories`(`category_id`)
-);
-```
-
-#### 대여/배정 테이블 
-```SQL
-CREATE OR REPLACE TABLE `assignments` (
-	`assignment_id` VARCHAR(20) PRIMARY KEY,
-	`asset_id` VARCHAR(20) UNIQUE NOT NULL,
-	`created_by` VARCHAR(10) NOT NULL,
-	`employee_id` VARCHAR(20) NOT NULL,
-	`policy_id` VARCHAR(20) NOT NULL,
-	`start_date` DATE,
-	`due_date` DATE,
-	FOREIGN KEY (`asset_id`) REFERENCES `assets`(`asset_id`),
-	FOREIGN KEY (`created_by`) REFERENCES `employees`(`employee_id`),
-	FOREIGN KEY (`employee_id`) REFERENCES `employees`(`employee_id`),
-	FOREIGN KEY (`policy_id`) REFERENCES `policy_rules`(`policy_id`)
-);
-```
-
-#### 반납/경고 테이블 
-```SQL
-CREATE OR REPLACE TABLE `policy_rules`(
-	`policy_id` VARCHAR(20) PRIMARY KEY UNIQUE,
-	`assignment_id` VARCHAR(20) NOT NULL UNIQUE ,
-	`policy_name` VARCHAR(10),
-	`warning_limit` INT,
-	`restriction_step` VARCHAR(5),
-	FOREIGN KEY (`assignment_id`) REFERENCES `assignments`(`assignment_id`)
-);
-```
-
-
-#### 정책 이벤트 테이블 
-```SQL
-CREATE OR REPLACE TABLE `policy_event_logs` (
-	`event_id` VARCHAR(20) PRIMARY KEY,
-	`policy_id` VARCHAR(20) NOT NULL ,
-	`employee_id` VARCHAR(20) NOT NULL ,
-	`assignment_id` VARCHAR(20) NOT NULL,
-	`occurred_at` DATE,
-	`event_type` VARCHAR(10),
-	FOREIGN KEY (`policy_id`) REFERENCES `policy_rules`(`policy_id`),
-	FOREIGN KEY (`employee_id`) REFERENCES `employees`(`employee_id`)
-);
-```
-
-#### 알림 테이블 
-```SQL
-CREATE OR REPLACE TABLE `notices`(
-	`notice_id` VARCHAR(30) PRIMARY KEY,
-	`employee_id` VARCHAR(20) UNIQUE ,
-	`policy_id` VARCHAR(20) ,
-	`assignment_id` VARCHAR(20) UNIQUE ,
-	`notice_type` VARCHAR(10),
-	`message` VARCHAR(50),
-	`is_read` CHAR(1),
-	FOREIGN KEY (`employee_id`) REFERENCES `employees`(`employee_id`),
-	FOREIGN KEY (`assignment_id`) REFERENCES `assignments`(`assignment_id`)
-);
-```
+<div>
+	
+### 운영 프로세스 (반납/검수/수리/대여)
 
 #### 반납 요청 테이블 
 ```SQL
@@ -522,14 +432,6 @@ CREATE OR REPLACE TABLE `return_requests`(
 	`request_reason` VARCHAR(50),
 	FOREIGN KEY (`assignment_id`) REFERENCES `assignments`(`assignment_id`),
 	FOREIGN KEY (`employee_id`) REFERENCES `employees`(`employee_id`)
-);
-```
-
-#### 검수 결과 테이블 
-```SQL
-CREATE OR REPLACE TABLE `inspection_results` (
-	`inspection_result_code` VARCHAR(5) PRIMARY KEY,
-	`description` VARCHAR(50)
 );
 ```
 
@@ -546,6 +448,26 @@ CREATE OR REPLACE TABLE `inspection` (
 	FOREIGN KEY (`return_request_id`) REFERENCES `return_requests`(`return_request_id`),
 	FOREIGN KEY (`employee_id`) REFERENCES `employees`(`employee_id`),
 	FOREIGN KEY (`inspection_result_code`) REFERENCES `inspection_results`(`inspection_result_code`)
+);
+```
+
+#### 반납_경고규칙 테이블 
+```SQL
+CREATE OR REPLACE TABLE `policy_rules`(
+	`policy_id` VARCHAR(20) PRIMARY KEY UNIQUE,
+	`assignment_id` VARCHAR(20) NOT NULL UNIQUE ,
+	`policy_name` VARCHAR(10),
+	`warning_limit` INT,
+	`restriction_step` VARCHAR(5),
+	FOREIGN KEY (`assignment_id`) REFERENCES `assignments`(`assignment_id`)
+);
+```
+
+#### 검수 결과 테이블 
+```SQL
+CREATE OR REPLACE TABLE `inspection_results` (
+	`inspection_result_code` VARCHAR(5) PRIMARY KEY,
+	`description` VARCHAR(50)
 );
 ```
 
@@ -571,15 +493,49 @@ CREATE OR REPLACE TABLE `repairs`(
 );
 ```
 
-#### 사용자 누적 상태 테이블 
+#### 대여/배정 테이블 
 ```SQL
-CREATE OR REPLACE TABLE `user_policy_state` (
-	`employee_id` VARCHAR(20) PRIMARY KEY ,
-	`overdue_count` INT,
-	`warning_count` INT,
-	`restriction_level` VARCHAR(5),
-	`updated_at` DATE,
-	FOREIGN KEY (`employee_id`) REFERENCES `employees`(`employee_id`)
+CREATE OR REPLACE TABLE `assignments` (
+	`assignment_id` VARCHAR(20) PRIMARY KEY,
+	`asset_id` VARCHAR(20) UNIQUE NOT NULL,
+	`created_by` VARCHAR(10) NOT NULL,
+	`employee_id` VARCHAR(20) NOT NULL,
+	`policy_id` VARCHAR(20) NOT NULL,
+	`start_date` DATE,
+	`due_date` DATE,
+	FOREIGN KEY (`asset_id`) REFERENCES `assets`(`asset_id`),
+	FOREIGN KEY (`created_by`) REFERENCES `employees`(`employee_id`),
+	FOREIGN KEY (`employee_id`) REFERENCES `employees`(`employee_id`),
+	FOREIGN KEY (`policy_id`) REFERENCES `policy_rules`(`policy_id`)
+);
+```
+
+</div>
+
+<br>
+
+## 
+
+<div> 
+	
+### 자산·재고 데이터 (자산/상태/입출고)
+
+#### 자산 테이블 
+```SQL
+CREATE OR REPLACE TABLE `assets` (
+	`asset_id` VARCHAR(20) PRIMARY KEY,
+	`category_id` VARCHAR(30) NOT NULL UNIQUE,
+	`serial_no` INT NOT NULL,
+	`model_name` VARCHAR(50),
+	FOREIGN KEY (`category_id`) REFERENCES `asset_categories`(`category_id`)
+);
+```
+
+#### 자산 분류 테이블 
+```SQL
+CREATE OR REPLACE TABLE `asset_categories`(
+	`category_id` VARCHAR(30) PRIMARY KEY,
+	`category_name` VARCHAR(10) NOT NULL
 );
 ```
 
@@ -624,6 +580,88 @@ CREATE OR REPLACE TABLE `checkout_logs`(
 	FOREIGN KEY (`employee_id`) REFERENCES `employees`(`employee_id`)
 );
 ```
+
+</div>
+
+<br>
+
+## 
+
+<div>
+	
+### 조직·사용자 (권한/대상 관리)
+	
+#### 부서 테이블 
+```SQL
+CREATE OR REPLACE TABLE `departments`(
+	`department_id` VARCHAR(20) PRIMARY KEY,
+	`department_name` VARCHAR(20)
+);
+```
+
+#### 직원 테이블 
+```SQL
+CREATE OR REPLACE TABLE `employees`(
+	`employee_id` VARCHAR(20) PRIMARY KEY, 
+	`department_id` VARCHAR(10) NOT NULL,
+	`name` VARCHAR(10) NOT NULL,
+	`email` VARCHAR(20) NOT NULL UNIQUE,
+	`created_at` DATE,
+	`password` VARCHAR(30) NOT NULL,
+	FOREIGN KEY (`department_id`) REFERENCES `departments`(`department_id`)
+);
+```
+#### 사용자 누적 상태 테이블 
+```SQL
+CREATE OR REPLACE TABLE `user_policy_state` (
+	`employee_id` VARCHAR(20) PRIMARY KEY ,
+	`overdue_count` INT,
+	`warning_count` INT,
+	`restriction_level` VARCHAR(5),
+	`updated_at` DATE,
+	FOREIGN KEY (`employee_id`) REFERENCES `employees`(`employee_id`)
+);
+```
+</div>
+
+<br>
+
+## 
+
+<div>
+	
+### 시스템 운영 (알림·정책·로그)
+
+#### 알림 테이블 
+```SQL
+CREATE OR REPLACE TABLE `notices`(
+	`notice_id` VARCHAR(30) PRIMARY KEY,
+	`employee_id` VARCHAR(20) UNIQUE ,
+	`policy_id` VARCHAR(20) ,
+	`assignment_id` VARCHAR(20) UNIQUE ,
+	`notice_type` VARCHAR(10),
+	`message` VARCHAR(50),
+	`is_read` CHAR(1),
+	FOREIGN KEY (`employee_id`) REFERENCES `employees`(`employee_id`),
+	FOREIGN KEY (`assignment_id`) REFERENCES `assignments`(`assignment_id`)
+);
+```
+
+#### 정책 이벤트 테이블 
+```SQL
+CREATE OR REPLACE TABLE `policy_event_logs` (
+	`event_id` VARCHAR(20) PRIMARY KEY,
+	`policy_id` VARCHAR(20) NOT NULL ,
+	`employee_id` VARCHAR(20) NOT NULL ,
+	`assignment_id` VARCHAR(20) NOT NULL,
+	`occurred_at` DATE,
+	`event_type` VARCHAR(10),
+	FOREIGN KEY (`policy_id`) REFERENCES `policy_rules`(`policy_id`),
+	FOREIGN KEY (`employee_id`) REFERENCES `employees`(`employee_id`)
+);
+```
+
+</div>
 
 <br />
 </details>
