@@ -669,17 +669,46 @@ CREATE OR REPLACE TABLE `policy_event_logs` (
 ---
 
 <a id="테스트-진행-과정"></a>
-## 🧪테스트 진행 과정
 
-> TODO: 테스트 시나리오/케이스/결과 추가
+## 🧪 테스트 진행 과정
 
-- 테스트 항목(예시)
-  - 대여 → 반납요청 → 반납/검수 정상 플로우
-  - 반납예정일 경과 → 요구/경고/제재 누적 조건
-  - 상태 역전/중복 처리 차단(제약/트리거 동작 확인)
-- 산출물(예시)
-  - `./테스트/테스트케이스.md`
-  - `./테스트/결과캡처/`
+테이블 명세서를 기준으로 DDL을 작성한 뒤 **MariaDB에서 생성/조회 쿼리로 정상 동작을 검증**했다.  
+아래 3개 산출물은 **핵심 테이블 생성 + 더미데이터 조회 결과**이며, FK 연결과 데이터 적재 여부를 함께 확인했다.
+
+---
+
+### 1) 자산(assets) 테이블 생성·조회
+![자산 테이블 테스트](./이미지/테스트이미지/자산.png)
+
+- `assets` 테이블을 생성하고, `asset_id(PK)` / `category_id(FK)` / `serial_no` / `model_name` 컬럼이 정상 생성되는지 확인
+- `category_id`가 `asset_categories(category_id)`를 참조하도록 FK 적용 후 `SELECT *` 결과로 **자산 데이터 적재/조회 정상 출력** 검증  
+  (예: `A001~A013` 자산 데이터가 조회됨)
+
+---
+
+### 2) 자산 분류(asset_categories) 테이블 생성·조회
+![자산 분류 테이블 테스트](./이미지/테스트이미지/자산분류.png)
+
+- `asset_categories` 테이블을 생성하고, `category_id(PK)`와 `category_name(NOT NULL)` 제약조건 적용 여부 확인
+- `SELECT *` 결과로 **분류 코드(C1~C5)와 한글 분류명(노트북/모니터/태블릿/키보드/마우스) 매핑**이 정상인지 검증  
+- 이후 `assets.category_id`가 해당 코드 범위로만 연결되는 구조(FK) 기반을 확보
+
+---
+
+### 3) 자산 상태 이력(asset_status_history) 테이블 생성·조회
+![자산 상태 이력 테이블 테스트](./이미지/테스트이미지/자산상태이력.png)
+
+- `asset_status_history` 테이블을 생성하고, `history_id(PK)` / `asset_id(FK)` / `from_status` / `to_status` / `changed_at` 컬럼 구성 확인
+- `asset_id`가 `assets(asset_id)`를 참조하도록 FK 적용 후 `SELECT *` 결과로 **상태 전이 이력(재고→사용/반납/수리) 기록 조회** 검증  
+  (예: `IN_STOCK → IN_USE/RETURNED/REPAIR` 및 변경일자 출력)
+
+---
+
+### 검증 포인트(요약)
+- `assets.category_id` ↔ `asset_categories.category_id` **FK 참조 무결성 유지**
+- `asset_status_history.asset_id` ↔ `assets.asset_id` **FK 참조 무결성 유지**
+- DDL 실행 후 `SELECT` 결과로 **테이블 생성/더미데이터 적재/조회 정상 동작** 확인
+
 
 ---
 
